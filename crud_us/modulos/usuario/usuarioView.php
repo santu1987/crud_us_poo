@@ -5,6 +5,7 @@ $diccionario = array(
 						'form_actions'=>array(
 												"url_server"=>RUTA_SERVER,
 												'user_controller' => USER_CONTROLLER,
+												'user_list_controller' => USER_LIST_CONTROLLER,
 												"CARGAR_PANTALLA_US"=>PANTALLA_US
 											 )
 						

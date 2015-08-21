@@ -1,0 +1,49 @@
+<div class="cuadro_div_tabla">
+	<fieldset>
+		<legend>
+			<h2>Consulta Crud mvc</h2>
+		</legend>
+	<div id='cuadro_filtros'>
+		<div class='form-group'>
+			<div class='col-lg-12'>
+				<h4>Filtros:</h4>
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class='col-lg-4'>
+				<input type='text' id='filtro_id' name='filtro_id' placeholder='Ingrese id' class='form-control' onchange="consultar_filtro();" value="{filtro_id}" onkeypress="return valida(event,this,10,2);" onblur="valida2(event,this,10,2);">
+			</div>
+			<div class='col-lg-4'>
+				<input type='text' id='filtro_name' name='filtro_name' placeholder='Ingrese nombre' onchange="consultar_filtro();" class='form-control' value="{filtro_name}" onkeypress="return valida(event,this,16,60);"  onblur="valida2(event,this,16,60);">
+			</div>	
+			<div class='col-lg-4'>
+			<input type='text' id='filtro_ci' name='filtro_ci' placeholder='Ingrese C&eacute;dula' onchange="consultar_filtro();" class='form-control' value="{filtro_ci}" onkeypress="return valida(event,this,10,11);" onblur="valida2(event,this,10,11);">
+			</div>
+		</div>	
+	</div>	
+	</fieldset>
+		<table class='table table-striped'>
+			<thead>
+				<th data-campo:'id'>id</th>
+				<th data-campo:'nombre'>Nombre</th>
+				<th data-campo:'cedula'>Cedula</th>
+			</thead>
+			<tbody>
+			<!--row_lista_us-->
+			<tr id="us{i}" onclick="{funcion}" data="{nombre},{cedula},{id}">
+				<td data-campo:'id' >{id}</td>
+				<td data-campo:'nombre' >{nombre}</td>
+				<td data-campo:'cedula' >{cedula}</td>
+			</tr>
+			<!--row_lista_us-->
+			</tbody>
+		</table>
+		<div role="toolbar">
+			<button type="button" class="btn btn-primary pag_btn {clase_paginador_anterior}" onclick='{paginador_anterior}' title="Ir anterior"><i class="fa fa-chevron-left"></i></button>
+			<button type="button" class="btn btn-primary pag_btn {clase_paginador_siguiente}" onclick='{paginador_siguiente}' title="Ir siguiente"><i class="fa fa-chevron-right"></i></button>
+			<span class='hide' id="offset_tabla" name="offset_tabla">{offset_tabla}</span>
+			<span class='span_paginacion' id="inicio_tabla" name="inicio_tabla">{inicio_tabla}</span><span class="span_paginacion">-</span>
+			<span class='span_paginacion' id="fin_tabla" name="fin_tabla">{fin_tabla}</span><span> de </span><span class="span_paginacion">:</span>
+			<span class='span_paginacion' id="cuantos_tabla" name="cuantos_tabla">{cuantos_tabla}</span>
+		</div>
+</div>
